@@ -1,36 +1,186 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markov Lični Sajt</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Marko | Digitalne Usluge</title>
+<meta name="description" content="Pravljenje sajtova, AI videa i digitalni marketing. Kontaktiraj me.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #111 0%, #000 60%);
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: #00ff99;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* SECTIONS */
+section {
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADINGS */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #00ff99;
+}
+
+/* TEXT */
+p {
+    max-width: 650px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 30px;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #00ff99, #00ccff);
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 255, 153, 0.4);
+}
+
+/* SERVICES */
+.services-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.services-list li {
+    list-style: none;
+    margin: 12px 0;
+    font-size: 1.1rem;
+}
+
+.services-list li::before {
+    content: "✔ ";
+    color: #00ff99;
+    font-weight: bold;
+}
+
+/* CONTACT */
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-info span {
+    display: block;
+    margin: 10px 0;
+}
+
+/* FOOTER SPACE FIX */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Dobrodošli na moj lični sajt!</h1>
-    <p>Ja sam Marko i ovde možete saznati više o meni.</p>
-    
+
+<nav>
+    <a href="#home">Početna</a>
+    <a href="#about">O meni</a>
+    <a href="#services">Usluge</a>
+    <a href="#contact">Kontakt</a>
+</nav>
+
+<section id="home">
+    <h1>Zdravo, ja sam Marko</h1>
+    <p>
+        Pomažem biznisima da povećaju prodaju pomoću modernih web sajtova,
+        AI video reklama i pametnih digitalnih rešenja.
+    </p>
+    <a href="#contact" class="btn">Kontaktiraj me</a>
+</section>
+
+<section id="about">
     <h2>O meni</h2>
-    <p>Ovdje možeš dodati nekoliko rečenica o sebi. Na primer, tvoje interesovanje, obrazovanje ili šta voliš da radiš.</p>
-    
+    <p>
+        Bavim se digitalnim uslugama koje pomažu firmama da izgledaju
+        profesionalno i da privuku više klijenata online.
+        Fokus mi je na čistim, modernim i efikasnim rešenjima koja donose rezultate.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Usluge</h2>
+    <ul class="services-list">
+        <li>Pravljenje modernih web sajtova</li>
+        <li>AI video reklame</li>
+        <li>Vođenje društvenih mreža</li>
+        <li>Digitalni marketing i brendiranje</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
     <div class="contact-info">
-        <h2>Moji kontakti</h2>
-        <p>Email: tvoj.email@example.com</p>
-        <p>Telefon: +381 60 123 4567</p>
+        <span>📧 Email: adpulse50@gmail.com</span>
+        <span>📱 Instagram: @tvojprofil</span>
+        <span>📞 WhatsApp: +381xxxxxxxx</span>
     </div>
+</section>
+
 </body>
 </html>
