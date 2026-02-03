@@ -2,185 +2,247 @@
 <html lang="sr">
 <head>
 <meta charset="UTF-8">
-<title>Marko | Digitalne Usluge</title>
-<meta name="description" content="Pravljenje sajtova, AI videa i digitalni marketing. Kontaktiraj me.">
+<title>AdPulse | Digital Marketing Agencija</title>
+<meta name="description" content="AdPulse je digital marketing agencija koja pomaže biznisima da rastu kroz web sajtove, AI video reklame i pametne marketing strategije.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Poppins',sans-serif;
+background:radial-gradient(circle at top,#111 0%,#000 65%);
+color:#fff;
+overflow-x:hidden;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #111 0%, #000 60%);
-    color: #ffffff;
-    scroll-behavior: smooth;
+/* LOADER */
+#loader{
+position:fixed;
+inset:0;
+background:#000;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+#loader span{
+color:#00ff99;
+letter-spacing:3px;
+font-size:1.4rem;
+animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%{opacity:.3}
+50%{opacity:1}
+100%{opacity:.3}
 }
 
 /* NAV */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
-    padding: 15px 0;
-    text-align: center;
-    z-index: 1000;
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:14px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+nav a{
+color:#00ff99;
+margin-left:20px;
+text-decoration:none;
+font-weight:600;
 }
 
-nav a {
-    color: #00ff99;
-    margin: 0 18px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+/* LOGO */
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
 }
-
-nav a:hover {
-    color: #ffffff;
+.logo span{
+font-weight:700;
+color:#00ff99;
+font-size:1.2rem;
 }
 
 /* SECTIONS */
-section {
-    min-height: 100vh;
-    padding: 120px 20px 60px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+section{
+padding:120px 20px 80px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:.8s;
 }
 
-/* HEADINGS */
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+section.full{
+min-height:100vh;
 }
 
-h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #00ff99;
+section.compact{
+padding:80px 20px 60px;
 }
 
-/* TEXT */
-p {
-    max-width: 650px;
-    line-height: 1.8;
-    font-size: 1.05rem;
-    opacity: 0.9;
+section.show{
+opacity:1;
+transform:none;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+h2{
+font-size:2.2rem;
+margin-bottom:20px;
+color:#00ff99;
+}
+p{
+max-width:760px;
+line-height:1.8;
+opacity:.9;
 }
 
 /* BUTTON */
-.btn {
-    margin-top: 30px;
-    padding: 16px 40px;
-    background: linear-gradient(135deg, #00ff99, #00ccff);
-    color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 50px;
-    transition: transform 0.3s, box-shadow 0.3s;
+.btn{
+margin-top:30px;
+padding:16px 44px;
+background:linear-gradient(135deg,#00ff99,#00ccff);
+color:#000;
+font-weight:700;
+border-radius:50px;
+text-decoration:none;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 255, 153, 0.4);
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:40px;
+max-width:1100px;
+width:100%;
+}
+.card{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:18px;
 }
 
-/* SERVICES */
-.services-list {
-    margin-top: 30px;
-    text-align: left;
+/* MARKETING IMAGES */
+.grid img{
+width:100%;
+border-radius:18px;
 }
 
-.services-list li {
-    list-style: none;
-    margin: 12px 0;
-    font-size: 1.1rem;
+/* FORM */
+form{
+margin-top:25px;
+width:100%;
+max-width:420px;
+display:flex;
+flex-direction:column;
+gap:15px;
 }
 
-.services-list li::before {
-    content: "✔ ";
-    color: #00ff99;
-    font-weight: bold;
+input, textarea{
+padding:14px;
+border-radius:8px;
+border:none;
+font-family:'Poppins';
+background:#1a1a1a;
+color:#fff;
+}
+
+textarea{
+resize:none;
+height:120px;
+}
+
+button{
+padding:14px;
+border:none;
+border-radius:50px;
+background:#00ff99;
+font-weight:700;
+cursor:not-allowed;
+opacity:.7;
 }
 
 /* CONTACT */
-.contact-info {
-    margin-top: 20px;
-    font-size: 1.1rem;
+.contact-info span{
+display:block;
+margin:10px 0;
+opacity:.9;
 }
 
-.contact-info span {
-    display: block;
-    margin: 10px 0;
+.notice{
+font-size:0.95rem;
+opacity:.7;
+margin-top:10px;
 }
 
-/* FOOTER SPACE FIX */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-    }
-    h2 {
-        font-size: 1.8rem;
-    }
+@media(max-width:768px){
+h1{font-size:2.2rem}
 }
 </style>
 </head>
 
 <body>
 
+<div id="loader"><span>ADPULSE</span></div>
+
 <nav>
-    <a href="#home">Početna</a>
-    <a href="#about">O meni</a>
-    <a href="#services">Usluge</a>
-    <a href="#contact">Kontakt</a>
+<div class="logo">
+<svg width="36" height="36" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="45" stroke="#00ff99" stroke-width="6" fill="none"/>
+<path d="M30 55 L50 30 L70 55" stroke="#00ff99" stroke-width="6"/>
+</svg>
+<span>AdPulse</span>
+</div>
+<div>
+<a href="#home">Početna</a>
+<a href="#services">Usluge</a>
+<a href="#process">Proces</a>
+<a href="#contact">Kontakt</a>
+</div>
 </nav>
 
-<section id="home">
-    <h1>Zdravo, ja sam Marko</h1>
-    <p>
-        Pomažem biznisima da povećaju prodaju pomoću modernih web sajtova,
-        AI video reklama i pametnih digitalnih rešenja.
-    </p>
-    <a href="#contact" class="btn">Kontaktiraj me</a>
+<section id="home" class="full">
+<h1>Digitalni marketing koji donosi klijente</h1>
+<p>
+Pomažemo biznisima da rastu kroz moderan dizajn,
+AI video reklame i strategije koje stvarno rade.
+</p>
+<a href="#contact" class="btn">Zakaži besplatne konsultacije</a>
 </section>
 
-<section id="about">
-    <h2>O meni</h2>
-    <p>
-        Bavim se digitalnim uslugama koje pomažu firmama da izgledaju
-        profesionalno i da privuku više klijenata online.
-        Fokus mi je na čistim, modernim i efikasnim rešenjima koja donose rezultate.
-    </p>
+<section id="services" class="full">
+<h2>Naše usluge</h2>
+<div class="grid">
+<div class="card">
+<h3>Web sajtovi</h3>
+<p>Moderni, brzi i optimizovani za prodaju.</p>
+</div>
+<div class="card">
+<h3>AI video reklame</h3>
+<p>Video sadržaj koji privlači pažnju i povećava konverzije.</p>
+</div>
+<div class="card">
+<h3>Digitalni marketing</h3>
+<p>Strategije rasta na društvenim mrežama i online kanalima.</p>
+</div>
+</div>
 </section>
 
-<section id="services">
-    <h2>Usluge</h2>
-    <ul class="services-list">
-        <li>Pravljenje modernih web sajtova</li>
-        <li>AI video reklame</li>
-        <li>Vođenje društvenih mreža</li>
-        <li>Digitalni marketing i brendiranje</li>
-    </ul>
-</section>
-
-<section id="contact">
-    <h2>Kontakt</h2>
-    <div class="contact-info">
-        <span>📧 Email: adpulse50@gmail.com</span>
-        <span>📱 Instagram: @tvojprofil</span>
-        <span>📞 WhatsApp: +381xxxxxxxx</span>
-    </div>
-</section>
-
-</body>
-</html>
+<section id="process" class="compact
