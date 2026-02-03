@@ -2,8 +2,8 @@
 <html lang="sr">
 <head>
 <meta charset="UTF-8">
-<title>AdPulse | Digital Marketing Agencija</title>
-<meta name="description" content="AdPulse je digital marketing agencija koja pomaže biznisima da rastu kroz web sajtove, AI video reklame i pametne marketing strategije.">
+<title>AdPulse | Digitalni Marketing Agencija</title>
+<meta name="description" content="AdPulse je digital marketing agencija specijalizovana za web sajtove, AI video reklame i online rast biznisa.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@ body{
 font-family:'Poppins',sans-serif;
 background:radial-gradient(circle at top,#111 0%,#000 65%);
 color:#fff;
+scroll-behavior:smooth;
 overflow-x:hidden;
 }
 
@@ -27,17 +28,13 @@ display:flex;
 align-items:center;
 justify-content:center;
 z-index:9999;
+transition:.6s;
 }
 #loader span{
 color:#00ff99;
-letter-spacing:3px;
+letter-spacing:4px;
 font-size:1.4rem;
-animation:pulse 1.5s infinite;
-}
-@keyframes pulse{
-0%{opacity:.3}
-50%{opacity:1}
-100%{opacity:.3}
+font-weight:600;
 }
 
 /* NAV */
@@ -45,17 +42,16 @@ nav{
 position:fixed;
 top:0;
 width:100%;
-padding:14px 30px;
+padding:16px 36px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,.85);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,.9);
 z-index:1000;
 }
 nav a{
 color:#00ff99;
-margin-left:20px;
+margin-left:24px;
 text-decoration:none;
 font-weight:600;
 }
@@ -69,54 +65,50 @@ gap:10px;
 .logo span{
 font-weight:700;
 color:#00ff99;
-font-size:1.2rem;
+font-size:1.25rem;
 }
 
 /* SECTIONS */
 section{
-padding:120px 20px 80px;
+padding:150px 24px 110px;
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
 text-align:center;
 opacity:0;
 transform:translateY(40px);
-transition:.8s;
+transition:.8s ease;
 }
-
-section.full{
-min-height:100vh;
-}
-
-section.compact{
-padding:80px 20px 60px;
-}
-
 section.show{
 opacity:1;
 transform:none;
 }
 
+/* COMPACT SECTION */
+section.compact{
+padding:110px 24px 90px;
+}
+
 h1{
-font-size:3rem;
-margin-bottom:20px;
+font-size:3.2rem;
+margin-bottom:26px;
 }
 h2{
-font-size:2.2rem;
-margin-bottom:20px;
+font-size:2.4rem;
+margin-bottom:26px;
 color:#00ff99;
 }
 p{
-max-width:760px;
-line-height:1.8;
-opacity:.9;
+max-width:820px;
+line-height:1.85;
+opacity:.92;
+font-size:1.05rem;
 }
 
 /* BUTTON */
 .btn{
-margin-top:30px;
-padding:16px 44px;
+margin-top:36px;
+padding:18px 52px;
 background:linear-gradient(135deg,#00ff99,#00ccff);
 color:#000;
 font-weight:700;
@@ -128,72 +120,78 @@ text-decoration:none;
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:40px;
-max-width:1100px;
+gap:32px;
+margin-top:50px;
+max-width:1150px;
 width:100%;
 }
 .card{
 background:rgba(255,255,255,.05);
-padding:30px;
-border-radius:18px;
+padding:36px;
+border-radius:20px;
+font-size:1.05rem;
 }
 
-/* MARKETING IMAGES */
+/* IMAGES */
 .grid img{
 width:100%;
-border-radius:18px;
+border-radius:16px;
+margin-top:18px;
 }
 
 /* FORM */
 form{
-margin-top:25px;
+margin-top:30px;
 width:100%;
-max-width:420px;
+max-width:440px;
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:16px;
 }
-
-input, textarea{
-padding:14px;
-border-radius:8px;
+input,textarea{
+padding:15px;
+border-radius:10px;
 border:none;
 font-family:'Poppins';
 background:#1a1a1a;
 color:#fff;
+font-size:0.95rem;
 }
-
-textarea{
-resize:none;
-height:120px;
-}
-
+textarea{resize:none;height:130px}
 button{
-padding:14px;
+padding:15px;
 border:none;
 border-radius:50px;
 background:#00ff99;
 font-weight:700;
-cursor:not-allowed;
 opacity:.7;
+cursor:not-allowed;
 }
 
-/* CONTACT */
+/* CONTACT INFO */
+.contact-info{
+margin-top:40px;
+}
 .contact-info span{
 display:block;
-margin:10px 0;
-opacity:.9;
-}
-
-.notice{
+margin:12px 0;
+opacity:.88;
 font-size:0.95rem;
-opacity:.7;
-margin-top:10px;
 }
 
+/* MOBILE */
 @media(max-width:768px){
-h1{font-size:2.2rem}
+h1{font-size:2.3rem}
+h2{font-size:2rem}
+section{
+opacity:1;
+transform:none;
+transition:none;
+padding:120px 20px 90px;
+}
+section.compact{
+padding:90px 20px 70px;
+}
 }
 </style>
 </head>
@@ -218,31 +216,70 @@ h1{font-size:2.2rem}
 </div>
 </nav>
 
-<section id="home" class="full">
-<h1>Digitalni marketing koji donosi klijente</h1>
-<p>
-Pomažemo biznisima da rastu kroz moderan dizajn,
-AI video reklame i strategije koje stvarno rade.
-</p>
-<a href="#contact" class="btn">Zakaži besplatne konsultacije</a>
+<section id="home" class="show">
+<h1>Digitalni marketing koji stvara rast</h1>
+<p>Pomažemo brendovima da izgrade online prisustvo, povećaju prodaju i izdvoje se kroz moderan dizajn i pametne strategije.</p>
+<a href="#contact" class="btn">Započni saradnju</a>
 </section>
 
-<section id="services" class="full">
+<section id="services">
 <h2>Naše usluge</h2>
 <div class="grid">
-<div class="card">
-<h3>Web sajtovi</h3>
-<p>Moderni, brzi i optimizovani za prodaju.</p>
-</div>
-<div class="card">
-<h3>AI video reklame</h3>
-<p>Video sadržaj koji privlači pažnju i povećava konverzije.</p>
-</div>
-<div class="card">
-<h3>Digitalni marketing</h3>
-<p>Strategije rasta na društvenim mrežama i online kanalima.</p>
-</div>
+<div class="card">Web sajtovi dizajnirani za konverzije i brzinu</div>
+<div class="card">AI video reklame za društvene mreže</div>
+<div class="card">Digitalni marketing & strategija rasta</div>
 </div>
 </section>
 
-<section id="process" class="compact
+<section id="process" class="compact">
+<h2>Naš proces</h2>
+<p>Analiza → Strategija → Kreiranje → Optimizacija → Rast. Svaki korak je fokusiran na rezultate.</p>
+<div class="grid">
+<img loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+<img loading="lazy" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+<img loading="lazy" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+</div>
+</section>
+
+<section id="contact" class="compact">
+<h2>Kontakt</h2>
+
+<p style="opacity:.7;font-size:.95rem;margin-bottom:12px;">
+⚠️ Kontakt forma trenutno još nije u funkciji. Uskoro će biti aktivna.
+</p>
+
+<form>
+<input type="text" placeholder="Ime">
+<input type="email" placeholder="Email">
+<textarea placeholder="Poruka"></textarea>
+<button type="button">Pošalji poruku</button>
+</form>
+
+<div class="contact-info">
+<span>📧 adpulse50@gmail.com</span>
+<span>📱 Instagram: trenutno nije u funkciji</span>
+<span>📞 Telefon: trenutno nije u funkciji</span>
+</div>
+</section>
+
+<script>
+window.onload=()=>{
+const loader=document.getElementById("loader");
+loader.style.opacity="0";
+setTimeout(()=>loader.style.display="none",600);
+};
+
+const sections=document.querySelectorAll("section");
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
+},{threshold:0.15});
+
+sections.forEach(sec=>observer.observe(sec));
+</script>
+
+</body>
+</html>
